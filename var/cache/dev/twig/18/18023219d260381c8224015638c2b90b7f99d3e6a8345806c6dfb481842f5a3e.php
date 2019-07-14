@@ -123,31 +123,36 @@ class __TwigTemplate_6e6b0129c1e23588914be87a0804cc32247adebb44ecd08fe5dbb52f4e5
                 <thead class=\"thead-dark\">
                   <tr>
                     <th scope=\"col\">METIER</th>
+                    <th scope=\"col\">EMPLOYERS</th>
                     <th scope=\"col\">MODIFIER</th>
                     <th scope=\"col\">SUPPRIMER</th>
                   </tr>
                 </thead>
                 <tbody>
     ";
-        // line 29
+        // line 30
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["services"]) || array_key_exists("services", $context) ? $context["services"] : (function () { throw new RuntimeError('Variable "services" does not exist.', 29, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["services"]) || array_key_exists("services", $context) ? $context["services"] : (function () { throw new RuntimeError('Variable "services" does not exist.', 30, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["service"]) {
-            // line 30
+            // line 31
             echo "    
         
             <tr>
                 <td>";
-            // line 33
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "libelle", [], "any", false, false, false, 33), "html", null, true);
-            echo "</td>
-                <td><button type=\"submit\" class=\"btn btn-primary\"><a href=\"";
             // line 34
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("editservice", ["id" => twig_get_attribute($this->env, $this->source, $context["service"], "id", [], "any", false, false, false, 34)]), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["service"], "libelle", [], "any", false, false, false, 34), "html", null, true);
+            echo "</td>
+                <td><button type=\"submit\" class=\"btn btn-secondary\"><a href=\"";
+            // line 35
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("listerserviceemployer", ["id" => twig_get_attribute($this->env, $this->source, $context["service"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            echo "\">Employers</a></button></td>
+                <td><button type=\"submit\" class=\"btn btn-primary\"><a href=\"";
+            // line 36
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("editservice", ["id" => twig_get_attribute($this->env, $this->source, $context["service"], "id", [], "any", false, false, false, 36)]), "html", null, true);
             echo "\">Modifier</a></button></td>
                 <td><button type=\"submit\" class=\"btn btn-danger\"><a href=\"";
-            // line 35
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete", ["id" => twig_get_attribute($this->env, $this->source, $context["service"], "id", [], "any", false, false, false, 35)]), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete", ["id" => twig_get_attribute($this->env, $this->source, $context["service"], "id", [], "any", false, false, false, 37)]), "html", null, true);
             echo "\">Supprimer</a></button></td>
             </tr>
         
@@ -157,7 +162,7 @@ class __TwigTemplate_6e6b0129c1e23588914be87a0804cc32247adebb44ecd08fe5dbb52f4e5
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['service'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 40
+        // line 42
         echo "</tbody>
 </table>
 </section>
@@ -182,7 +187,7 @@ class __TwigTemplate_6e6b0129c1e23588914be87a0804cc32247adebb44ecd08fe5dbb52f4e5
 
     public function getDebugInfo()
     {
-        return array (  161 => 40,  150 => 35,  146 => 34,  142 => 33,  137 => 30,  133 => 29,  113 => 11,  103 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
+        return array (  166 => 42,  155 => 37,  151 => 36,  147 => 35,  143 => 34,  138 => 31,  134 => 30,  113 => 11,  103 => 10,  89 => 5,  79 => 4,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -210,6 +215,7 @@ class __TwigTemplate_6e6b0129c1e23588914be87a0804cc32247adebb44ecd08fe5dbb52f4e5
                 <thead class=\"thead-dark\">
                   <tr>
                     <th scope=\"col\">METIER</th>
+                    <th scope=\"col\">EMPLOYERS</th>
                     <th scope=\"col\">MODIFIER</th>
                     <th scope=\"col\">SUPPRIMER</th>
                   </tr>
@@ -220,6 +226,7 @@ class __TwigTemplate_6e6b0129c1e23588914be87a0804cc32247adebb44ecd08fe5dbb52f4e5
         
             <tr>
                 <td>{{ service.libelle }}</td>
+                <td><button type=\"submit\" class=\"btn btn-secondary\"><a href=\"{{path('listerserviceemployer', {'id': service.id})}}\">Employers</a></button></td>
                 <td><button type=\"submit\" class=\"btn btn-primary\"><a href=\"{{path('editservice', {'id': service.id})}}\">Modifier</a></button></td>
                 <td><button type=\"submit\" class=\"btn btn-danger\"><a href=\"{{path('delete', {'id': service.id})}}\">Supprimer</a></button></td>
             </tr>

@@ -21,6 +21,7 @@
                 <thead class="thead-dark">
                   <tr>
                     <th scope="col">METIER</th>
+                    <th scope="col">EMPLOYERS</th>
                     <th scope="col">MODIFIER</th>
                     <th scope="col">SUPPRIMER</th>
                   </tr>
@@ -31,6 +32,7 @@
         
             <tr>
                 <td>{{ service.libelle }}</td>
+                <td><button type="submit" class="btn btn-secondary"><a href="{{path('listerserviceemployer', {'id': service.id})}}">Employers</a></button></td>
                 <td><button type="submit" class="btn btn-primary"><a href="{{path('editservice', {'id': service.id})}}">Modifier</a></button></td>
                 <td><button type="submit" class="btn btn-danger"><a href="{{path('delete', {'id': service.id})}}">Supprimer</a></button></td>
             </tr>

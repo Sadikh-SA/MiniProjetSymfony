@@ -142,4 +142,18 @@ class ServiceController extends AbstractController
         
     }
 
+
+     /**
+     * @Route("/service/{id}/lister/service/employer", name="listerserviceemployer")
+     */
+    public function listerServiceEmployer(Service $serv)
+    {
+
+        $servicesemployers = $serv->getEmployers();
+
+        return $this->render('service/emplserv.html.twig', [
+            'servicesemployers' => $servicesemployers
+        ]);
+    }
+
 }

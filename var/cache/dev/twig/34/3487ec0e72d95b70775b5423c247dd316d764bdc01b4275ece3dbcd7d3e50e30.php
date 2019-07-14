@@ -77,31 +77,31 @@ class __TwigTemplate_d1978aafd667f0ca0fbc1ebd67469aff9d55d2b00091de299df61b189f4
 
         ";
         // line 8
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 8, $this->source); })()), 'row', ["attr" => ["placeholder" => "Matricule de l'Employer"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 8, $this->source); })()), 'row', ["attr" => ["placeholder" => "Matricule de Employer"]]);
         echo "
         ";
         // line 9
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 9, $this->source); })()), 'row', ["attr" => ["placeholder" => "Nom Complet de l'Employer"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 9, $this->source); })()), 'row', ["attr" => ["placeholder" => "Nom Complet de Employer"]]);
         echo "
         ";
         // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 10, $this->source); })()), 'row', ["attr" => ["placeholder" => "Date De Naissance de l'Employer"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 10, $this->source); })()), 'row', ["attr" => ["placeholder" => "Date De Naissance de Employer"]]);
         echo "
         ";
         // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 11, $this->source); })()), 'row', ["attr" => ["placeholder" => "Adresse de l'Employer"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 11, $this->source); })()), 'row', ["attr" => ["placeholder" => "Adresse de Employer"]]);
         echo "
         ";
         // line 12
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 12, $this->source); })()), 'row', ["attr" => ["placeholder" => "Numéro CNI de l'Employer"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 12, $this->source); })()), 'row', ["attr" => ["placeholder" => "Numéro CNI de Employer"]]);
         echo "
         ";
         // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 13, $this->source); })()), 'row', ["attr" => ["placeholder" => "Salaire de l'Employer"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 13, $this->source); })()), 'row', ["attr" => ["placeholder" => "Salaire de Employer"]]);
         echo "
         ";
         // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 14, $this->source); })()), 'row', ["attr" => ["placeholder" => "Service de l'Employer"]]);
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["formEmployer"]) || array_key_exists("formEmployer", $context) ? $context["formEmployer"] : (function () { throw new RuntimeError('Variable "formEmployer" does not exist.', 14, $this->source); })()), 'row', ["attr" => ["placeholder" => "Service de Employer"]]);
         echo "
 
         <button type=\"submit\" class=\"btn btn-success\"> 
@@ -156,13 +156,13 @@ class __TwigTemplate_d1978aafd667f0ca0fbc1ebd67469aff9d55d2b00091de299df61b189f4
 
     {{ form_start(formEmployer) }}
 
-        {{ form_row(formEmployer, {'attr': {'placeholder': \"Matricule de l'Employer\"}}) }}
-        {{ form_row(formEmployer, {'attr': {'placeholder': \"Nom Complet de l'Employer\"}}) }}
-        {{ form_row(formEmployer, {'attr': {'placeholder': \"Date De Naissance de l'Employer\"}}) }}
-        {{ form_row(formEmployer, {'attr': {'placeholder': \"Adresse de l'Employer\"}}) }}
-        {{ form_row(formEmployer, {'attr': {'placeholder': \"Numéro CNI de l'Employer\"}}) }}
-        {{ form_row(formEmployer, {'attr': {'placeholder': \"Salaire de l'Employer\"}}) }}
-        {{ form_row(formEmployer, {'attr': {'placeholder': \"Service de l'Employer\"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': \"Matricule de Employer\"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': \"Nom Complet de Employer\"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': \"Date De Naissance de Employer\"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': \"Adresse de Employer\"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': \"Numéro CNI de Employer\"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': \"Salaire de Employer\"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': \"Service de Employer\"}}) }}
 
         <button type=\"submit\" class=\"btn btn-success\"> 
             {% if editer %}

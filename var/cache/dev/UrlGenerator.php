@@ -23,4 +23,5 @@ return [
     'editservice' => [['id'], ['_controller' => 'App\\Controller\\ServiceController::CreerService'], [], [['text', '/editservice'], ['variable', '/', '[^/]++', 'id', true], ['text', '/service']], [], []],
     'delete' => [['id'], ['_controller' => 'App\\Controller\\ServiceController::Supprimer'], [], [['text', '/del'], ['variable', '/', '[^/]++', 'id', true], ['text', '/service']], [], []],
     'accueil' => [[], ['_controller' => 'App\\Controller\\ServiceController::Accueil'], [], [['text', '/']], [], []],
+    'listerserviceemployer' => [['id'], ['_controller' => 'App\\Controller\\ServiceController::listerServiceEmployer'], [], [['text', '/lister/service/employer'], ['variable', '/', '[^/]++', 'id', true], ['text', '/service']], [], []],
 ];

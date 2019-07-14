@@ -19,7 +19,7 @@ class Employer
 
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\Length(min=8)
+     * @Assert\Length(min=3)
      */
     private $matricule;
 
@@ -37,7 +37,6 @@ class Employer
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\Length(min=5)
      */
     private $Salaire;
 
@@ -48,7 +47,6 @@ class Employer
 
     /**
      * @ORM\Column(type="date")
-     * @Assert\Length(min=8)
      */
     private $ddn;
 

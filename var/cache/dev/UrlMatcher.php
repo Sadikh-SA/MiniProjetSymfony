@@ -42,6 +42,7 @@ return [
                         .'|service(*:220)'
                     .')'
                     .'|del(*:232)'
+                    .'|lister/service/employer(*:263)'
                 .')'
             .')/?$}sDu',
     ],
@@ -55,8 +56,9 @@ return [
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         205 => [[['_route' => 'editemployer', '_controller' => 'App\\Controller\\ServiceController::CreerEditEmployer'], ['id'], null, null, false, false, null]],
         220 => [[['_route' => 'editservice', '_controller' => 'App\\Controller\\ServiceController::CreerService'], ['id'], null, null, false, false, null]],
-        232 => [
-            [['_route' => 'delete', '_controller' => 'App\\Controller\\ServiceController::Supprimer'], ['id'], null, null, false, false, null],
+        232 => [[['_route' => 'delete', '_controller' => 'App\\Controller\\ServiceController::Supprimer'], ['id'], null, null, false, false, null]],
+        263 => [
+            [['_route' => 'listerserviceemployer', '_controller' => 'App\\Controller\\ServiceController::listerServiceEmployer'], ['id'], null, null, false, false, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
