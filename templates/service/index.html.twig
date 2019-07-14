@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ServiceController!{% endblock %}
+{% block lien %}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+{% endblock %}
+{% block body %}
+<style>
+        .milieu {
+            width: 60%;
+            margin: 0 auto;
+            margin-top: 5%;
+            text-align: center;
+        }
+    </style>
+<section class="milieu">
+        <table class="table">
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">METIER</th>
+                    <th scope="col">MODIFIER</th>
+                    <th scope="col">SUPPRIMER</th>
+                  </tr>
+                </thead>
+                <tbody>
+    {% for service in services %}
+    
+        
+            <tr>
+                <td>{{ service.libelle }}</td>
+                <td><button type="submit" class="btn btn-primary"><a href="{{path('editservice', {'id': service.id})}}">Modifier</a></button></td>
+                <td><button type="submit" class="btn btn-danger"><a href="{{path('delete', {'id': service.id})}}">Supprimer</a></button></td>
+            </tr>
+        
+   
+    {% endfor %}
+</tbody>
+</table>
+</section>
+{% endblock %}

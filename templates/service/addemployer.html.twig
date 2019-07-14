@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+{% form_theme formEmployer 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+    <h2>    CRÉATION D'UN EMPLOYER </h2>
+
+    {{ form_start(formEmployer) }}
+
+        {{ form_row(formEmployer, {'attr': {'placeholder': "Matricule de l'Employer"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': "Nom Complet de l'Employer"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': "Date De Naissance de l'Employer"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': "Adresse de l'Employer"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': "Numéro CNI de l'Employer"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': "Salaire de l'Employer"}}) }}
+        {{ form_row(formEmployer, {'attr': {'placeholder': "Service de l'Employer"}}) }}
+
+        <button type="submit" class="btn btn-success"> 
+            {% if editer %}
+                MODIFIER EMPLOYER
+            {% else %}
+                AJOUTER EMPLOYER
+            {% endif %}
+        </button>
+    {{ form_end(formEmployer) }}
+
+{% endblock %}
