@@ -2,7 +2,10 @@
 
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\GreaterThan'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\GreaterThan')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\Positive'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Positive')),
         ],
         null,
         [
@@ -10,10 +13,32 @@
                 'type' => [
                     'integer',
                 ],
+                'message' => [
+                    1 => 'ce champs ne peut pas être vide',
+                    'Un salaire inférieur à 10.000 FCFA? Sérieux vous avez pas de coeur vous.',
+                ],
+                'groups' => [
+                    1 => [
+                        'Default',
+                    ],
+                    [
+                        'Default',
+                    ],
+                    [
+                        'Default',
+                    ],
+                ],
+                'value' => [
+                    2 => 10000,
+                    0,
+                ],
             ],
         ],
         [
             $o[0],
+            $o[1],
+            $o[2],
+            $o[3],
         ],
         []
     );

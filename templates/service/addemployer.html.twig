@@ -3,7 +3,7 @@
 {% block body %}
     <h2>    CRÉATION D'UN EMPLOYER </h2>
 
-    {{ form_start(formEmployer) }}
+    {{ form_start(formEmployer , {'attr': {'novalidate': 'novalidate'} }) }}
 
         {{ form_row(formEmployer, {'attr': {'placeholder': "Matricule de l'Employer"}}) }}
         {{ form_row(formEmployer, {'attr': {'placeholder': "Nom Complet de l'Employer"}}) }}

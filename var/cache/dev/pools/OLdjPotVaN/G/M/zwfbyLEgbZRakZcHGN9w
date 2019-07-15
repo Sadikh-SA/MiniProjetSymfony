@@ -2,7 +2,10 @@
 
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
-            clone (\Symfony\Component\VarExporter\Internal\Registry::$prototypes['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\Column'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\Column')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\Date'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Date')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\LessThan'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\LessThan')),
+            clone ($p['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
         ],
         null,
         [
@@ -10,10 +13,31 @@
                 'type' => [
                     'date',
                 ],
+                'groups' => [
+                    1 => [
+                        'Default',
+                    ],
+                    [
+                        'Default',
+                    ],
+                    [
+                        'Default',
+                    ],
+                ],
+                'message' => [
+                    2 => 'tu veux faire travailler des enfants? Tu mérite la mort',
+                    'ce champs ne peut pas être vide',
+                ],
+                'value' => [
+                    2 => '-18 years',
+                ],
             ],
         ],
         [
             $o[0],
+            $o[1],
+            $o[2],
+            $o[3],
         ],
         []
     );
