@@ -4,9 +4,11 @@ namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\EmployerRepository")
+ * @UniqueEntity("matricule", message="Ce matricule existe déja")
  * 
  */
 class Employer
@@ -19,7 +21,7 @@ class Employer
     private $id;
 
     /**
-     * @ORM\Column(name="matricule", type="string", length=255)
+     * @ORM\Column(name="matricule",type="string", length=255)
      * @Assert\NotBlank(message="Ce champs doit être renseigné")
      */
     private $matricule;

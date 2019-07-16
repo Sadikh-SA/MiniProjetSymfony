@@ -24,7 +24,7 @@ class ServiceController extends AbstractController
         $services = $repo->findAll();
 
         return $this->render('service/index.html.twig', [
-            'controller_name' => 'ServiceController',
+            'controller_namex' => 'ServiceControllers',
             'services' => $services
         ]);
     }
@@ -47,7 +47,7 @@ class ServiceController extends AbstractController
      * @Route("/service/newemployer", name="addemployer")
      * @Route("/service/{id}/editemployer", name="editemployer")
      */
-    public function CreerEditEmployer(Employer $employer=null, Request $request, ObjectManager $manager)
+    public function CreerEditEmployer(Request $request, ObjectManager $manager, Employer $employer=null)
     {
         if (!$employer) {
             $employer = new Employer();
@@ -87,7 +87,7 @@ class ServiceController extends AbstractController
      * @Route("/service/newservice", name="addservice")
      * @Route("/service/{id}/editservice", name="editservice")
      */
-    public function CreerService(Service $services=null, Request $request, ObjectManager $manager)
+    public function CreerService(Request $request, ObjectManager $manager, Service $services = null)
     {
         if (!$services) {
             $services = new Service();
